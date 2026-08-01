@@ -1,1 +1,68 @@
-﻿<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Informalidad Laboral - ENEMDU</title></head><body><h1>Proyecto Econometría - Wendy Yugsi</h1><p>Determinantes de la Informalidad Laboral en Ecuador</p></body></html>
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Determinantes de la Informalidad Laboral en Ecuador</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <span class="logo">Econometría ENEMDU</span>
+      <span class="badge">Vercel Live</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Determinantes de la Informalidad Laboral en Ecuador</h1>
+      <p class="subtitle">Análisis probabilístico econométrico mediante modelos <strong>Logit</strong> y <strong>Probit</strong> aplicados a microdatos de la ENEMDU.</p>
+    </section>
+
+    <div class="grid">
+      <!-- Tarjeta 1: Gráfico Principal -->
+      <div class="card card-large">
+        <h2>Evaluación Comparativa de Modelos (Curva ROC)</h2>
+        <div class="img-container">
+          <img src="outputs/curva_roc_comparativa.png" alt="Curva ROC Logit vs Probit" onerror="this.src='https://via.placeholder.com/800x450?text=Ejecuta+modeling.py+para+generar+la+Curva+ROC'">
+        </div>
+        <p class="card-caption">Comparativa del poder de discriminación probabilística entre el modelo Logit y Probit.</p>
+      </div>
+
+      <!-- Tarjeta 2: Resumen del Pipeline -->
+      <div class="card">
+        <h2>Ficha Técnica</h2>
+        <ul class="specs-list">
+          <li><strong>Base de datos:</strong> ENEMDU (INEC)</li>
+          <li><strong>Muestra:</strong> Ocupados (PEA)</li>
+          <li><strong>Variable Y:</strong> Informalidad (1 = Informal, 0 = Formal)</li>
+          <li><strong>Controles:</strong> Edad, $Edad^2$, Sexo, Escolaridad, Pareja</li>
+          <li><strong>Modelos:</strong> Logit / Probit Binario</li>
+        </ul>
+      </div>
+
+      <!-- Tarjeta 3: Estado de Automatización -->
+      <div class="card">
+        <h2>Arquitectura del Sistema</h2>
+        <div class="status-box">
+          <p>✔️ Pipeline de Limpieza Automático (<code>src/cleaning.py</code>)</p>
+          <p>✔️ Estimación y Exportación (<code>src/modeling.py</code>)</p>
+          <p>✔️ Despliegue Continuo (<code>Vercel Auto-CI</code>)</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Proyecto Econométrico de Informalidad Laboral &copy; 2026 — Wendy Yugsi</p>
+    </div>
+  </footer>
+
+</body>
+</html>
